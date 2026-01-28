@@ -8,11 +8,16 @@ n = a.filter(num => num<0)
 let b = [].concat(n,...z)
 let c = [].concat(b,...nz)
 console.log(c);
-console.log(a.includes(5));
-const d = a.join()
-console.log(typeof d);
-let e = 200;
-let f = 300;
-let g = 400;
-console.log(Array.of(e,f,g));
+let ar = [1,2,3,4,5]
+function rev (arr){
+    let left = 0, right = arr.length-1
+    while(left<right){
+        [arr[left],arr[right]]=[arr[right],arr[left]]
+        left++;
+        right--;
+    }
+    return arr;
+}
+console.log(rev(ar));
+
 
